@@ -26,8 +26,8 @@ export default class ChartWizardCommandSet extends BaseListViewCommandSet<IChart
     Log.info(LOG_SOURCE, 'Initialized ChartWizardCommandSet');
 
     // initial state of the command's visibility
-    const compareOneCommand: Command = this.tryGetCommand('COMMAND_1');
-    compareOneCommand.visible = false;
+    // const compareOneCommand: Command = this.tryGetCommand('COMMAND_1');
+    // compareOneCommand.visible = true;
 
     this.context.listView.listViewStateChangedEvent.add(this, this._onListViewStateChanged);
 
@@ -41,11 +41,11 @@ export default class ChartWizardCommandSet extends BaseListViewCommandSet<IChart
           /* handle error */
         });
         break;
-      case 'COMMAND_2':
-        Dialog.alert(`${this.properties.sampleTextTwo}`).catch(() => {
-          /* handle error */
-        });
-        break;
+      // case 'COMMAND_2':
+      //   Dialog.alert(`${this.properties.sampleTextTwo}`).catch(() => {
+      //     /* handle error */
+      //   });
+      //   break;
       default:
         throw new Error('Unknown command');
     }
@@ -54,11 +54,11 @@ export default class ChartWizardCommandSet extends BaseListViewCommandSet<IChart
   private _onListViewStateChanged = (args: ListViewStateChangedEventArgs): void => {
     Log.info(LOG_SOURCE, 'List view state changed');
 
-    const compareOneCommand: Command = this.tryGetCommand('COMMAND_1');
-    if (compareOneCommand) {
-      // This command should be hidden unless exactly one row is selected.
-      compareOneCommand.visible = this.context.listView.selectedRows?.length === 1;
-    }
+    // const compareOneCommand: Command = this.tryGetCommand('COMMAND_1');
+    // if (compareOneCommand) {
+    //   // This command should be hidden unless exactly one row is selected.
+    //   compareOneCommand.visible = this.context.listView.selectedRows?.length === 1;
+    // }
 
     // TODO: Add your logic here
 

@@ -16,7 +16,7 @@
       }
     },
     "chartWizard": {
-      "pageUrl": "https://{tenantDomain}/SitePages/myPage.aspx",
+      "pageUrl": "https://https://claringtonnet.sharepoint.com/sites/SCAdminTest/SitePages/myPage.aspx",
       "customActions": {
         "0845d58a-a08d-4c37-9d59-184a2a382722": {
           "location": "ClientSideExtension.ListViewCommandSet.CommandBar",
