@@ -1,0 +1,22 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "18.18.2",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.24.0"
+    },
+    "version": "1.20.0",
+    "libraryName": "clarington-chart-wizard",
+    "libraryId": "f5629a55-f3d0-48a6-9d19-5045ce8de9c8",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "Clarington-Chart-Wizard",
+    "solutionShortDescription": "Clarington-Chart-Wizard description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "extension",
+    "extensionType": "ListViewCommandSet"
+  }
+}
