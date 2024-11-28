@@ -1,11 +1,15 @@
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
 import { Log } from '@microsoft/sp-core-library';
 import {
   BaseListViewCommandSet,
-  type Command,
   type IListViewCommandSetExecuteEventParameters,
   type ListViewStateChangedEventArgs
 } from '@microsoft/sp-listview-extensibility';
-import { Dialog } from '@microsoft/sp-dialog';
+import { ChartWizardSidePanel, IChartWizardSidePanelProps } from './Components/ChartWizardSidePanel';
+
+
+const LOG_SOURCE: string = 'ChartWizardCommandSet';
 
 /**
  * If your command set uses the ClientSideComponentProperties JSON input,
@@ -17,8 +21,6 @@ export interface IChartWizardCommandSetProperties {
   sampleTextOne: string;
   sampleTextTwo: string;
 }
-
-const LOG_SOURCE: string = 'ChartWizardCommandSet';
 
 export default class ChartWizardCommandSet extends BaseListViewCommandSet<IChartWizardCommandSetProperties> {
 
@@ -37,9 +39,15 @@ export default class ChartWizardCommandSet extends BaseListViewCommandSet<IChart
   public onExecute(event: IListViewCommandSetExecuteEventParameters): void {
     switch (event.itemId) {
       case 'COMMAND_1':
-        Dialog.alert(`${this.properties.sampleTextOne}`).catch(() => {
-          /* handle error */
-        });
+        const div = document.createElement('div');
+        const element: React.ReactElement<IChartWizardSidePanelProps> = React.createElement(
+          ChartWizardSidePanel,
+          {
+            isOpen: true,
+            context: this.context
+          }
+        );
+        ReactDOM.render(element, div);
         break;
       // case 'COMMAND_2':
       //   Dialog.alert(`${this.properties.sampleTextTwo}`).catch(() => {

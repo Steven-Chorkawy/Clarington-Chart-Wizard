@@ -16,7 +16,7 @@
       }
     },
     "chartWizard": {
-      "pageUrl": "https://https://claringtonnet.sharepoint.com/sites/SCAdminTest/SitePages/myPage.aspx",
+      "pageUrl": "https://claringtonnet.sharepoint.com/sites/SCAdminTest/ViewTest1?debugManifestsFile=https%3A%2F%2Flocalhost%3A4321%2Ftemp%2Fmanifests.js&loadSPFX=true&customActions=%7B%220845d58a-a08d-4c37-9d59-184a2a382722%22%3A%7B%22location%22%3A%22ClientSideExtension.ListViewCommandSet.CommandBar%22%2C%22properties%22%3A%7B%22sampleTextOne%22%3A%22One+item+is+selected+in+the+list%22%2C%22sampleTextTwo%22%3A%22This+command+is+always+visible.%22%7D%7D%7D",
       "customActions": {
         "0845d58a-a08d-4c37-9d59-184a2a382722": {
           "location": "ClientSideExtension.ListViewCommandSet.CommandBar",
