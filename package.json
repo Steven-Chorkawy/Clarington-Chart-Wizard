@@ -32,6 +32,7 @@
     "@progress/kendo-react-layout": "^9.0.0",
     "@progress/kendo-react-popup": "^9.0.0",
     "@progress/kendo-svg-icons": "^4.0.0",
+    "@progress/kendo-theme-fluent": "^10.0.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "tslib": "2.3.1"
